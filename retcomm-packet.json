@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "smurfs-the-psx",
+  "name": "Smurfs, The",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "smurfs-the-recomp",
+  "rom_identity": {
+    "crc32": [
+      "d141f530"
+    ],
+    "md5": [
+      "81317b3c5c244a1c8a611e27a8a3b6a0"
+    ],
+    "sha1": [
+      "e37f205d2f5205473b7c2cf7f706f0b42b685d54"
+    ],
+    "disc_serials": [
+      "SLUS-01008"
+    ],
+    "sizes": [
+      261375408
+    ],
+    "filenames": [
+      "Smurfs, The (USA) (En,Fr,Es).cue",
+      "Smurfs, The (USA) (En,Fr,Es) (Track 1).bin"
+    ],
+    "track_counts": [
+      50
+    ],
+    "disc_fps": [
+      "136985ebf48c870044dc7a8cf9eeda16ccf32e102d5e0da3971c0dacc9b13b1b"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/smurfs-the-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "smurfs-the-*-windows-x64.zip",
+      "linux-x64": "smurfs-the-*-linux-x64.zip",
+      "macos-arm64": "smurfs-the-*-macos-arm64.zip",
+      "macos-x64": "smurfs-the-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "smurfs_the.exe",
+    "linux": "smurfs_the",
+    "macos": "smurfs_the"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/smurfs-the-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
